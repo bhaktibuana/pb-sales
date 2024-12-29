@@ -1,6 +1,7 @@
 import Antd from 'ant-design-vue';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
+import { registerSW } from 'virtual:pwa-register';
 
 import App from '@/App.vue';
 import { router } from '@/routers/index';
@@ -31,3 +32,5 @@ app.directive('click-outside', {
 });
 
 app.mount('#app');
+
+registerSW();
